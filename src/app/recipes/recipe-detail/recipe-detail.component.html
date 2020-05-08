@@ -7,35 +7,39 @@
             style="max-height: 300px;">
     </div>
 </div>
-
+<br>
 <div class="row">
     <div class="col-12">
         <h1> {{recipe.name}} </h1>
     </div>
 </div>
-
+<br>
 <div class="row">
     <div class="col-12">
-        <div class="btn-group">
+        <div class="btn-group" appDropdown>
             <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
 
-            <ul class="dropdown-menu">
-                <li><a href="#">Add Ingredient</a></li>
-                <li><a href="#">Edit Recipe</a></li>
-                <li><a href="#">Delete Recipe</a></li>
+            <ul class="dropdown-menu" >
+                <li><a class="nav-link" style="cursor: pointer" (click) = "onAddToShopping()">Add Ingredient</a></li>
+                <li><a class="nav-link" style="cursor: pointer">Edit Recipe</a></li>
+                <li><a class="nav-link" style="cursor: pointer">Delete Recipe</a></li>
             </ul>
         </div>
     </div>
 </div>
-
+<br>
 <div class="row">
     <div class="col-12">
         {{recipe.description}}
     </div>
 </div>
-
+<br>
 <div class="row">
     <div class="col-12">
-        Ingredient
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+                {{ingredient.name}} - {{ingredient.amount}}
+            </li>
+        </ul>
     </div>
 </div>
