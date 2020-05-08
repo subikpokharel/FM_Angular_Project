@@ -29,9 +29,12 @@ export class RecipeService{
         return this.recipes.slice();
     }
 
-  addIngredientToShopping(ingredients: Ingredient[]){
+    addIngredientToShopping(ingredients: Ingredient[]){
+        this.slService.addIngredients(ingredients);
+    }
 
-    this.slService.addIngredients(ingredients);
-  }
+    getRecipeById(index: number){
+        return this.recipes.slice()[index];
+    }
 
 }
