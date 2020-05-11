@@ -22,7 +22,7 @@ export class RecipeEditRouterGuard implements CanActivate {
         const dialogRef = this.dialog.open(MyDialogComponent, {
           data: {
             dialogTitle: "Invalid Recipe ID",
-            dialogMessage: "You are being redirected!!",
+            dialogMessage: "Please select where you want to be redirected!!",
             buttonSave: "Go Home",
             buttonCancel: "Shopping"
           }
