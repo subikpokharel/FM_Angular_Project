@@ -15,8 +15,8 @@ export class MyDialogComponent implements OnInit {
   }
 
   save(){
-    this.dialogRef.close("It was Saved");
-    console.log("Save clicked");
+    this.dialogRef.close("Save clicked");
+    //console.log("Save clicked");
   }
 
   /*close() {

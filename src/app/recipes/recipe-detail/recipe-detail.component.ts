@@ -42,7 +42,7 @@ export class RecipeDetailComponent implements OnInit {
 
     const dialogRef = this.dialog.open(MyDialogComponent, {
       data: {
-        myVar: "My VARIABLE"
+        dialogMessage: "Would you like to save?"
       }
     });
 
