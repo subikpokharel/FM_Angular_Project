@@ -1,12 +1,13 @@
 import { Recipe } from './recipe.model';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { Subject } from 'rxjs';
 //Injecting service inside a service
 @Injectable()
 export class RecipeService{
 
-    public recipeSelected = new EventEmitter<Recipe>();
+    //public recipeSelected = new Subject<Recipe>();
     private recipes: Recipe[] = [
         new Recipe('Chicken Schnitzel', 'A super tasty schnitzel - just yummy!!',
         'https://img3.stockfresh.com/files/p/peteer/m/39/7817296_stock-photo-wiener-schnitzel-with-potatoes.jpg',
