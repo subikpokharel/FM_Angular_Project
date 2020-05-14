@@ -18,6 +18,7 @@ export class RecipeDetailRouterGuard implements CanActivate {
 
         let id = +next.url[0].path; //retrieve the first parameter from the url. + at the begenning converts the URL path string to a number
         if (isNaN(id) || id < 0) { //If the resulting value is not a number or less than zero
+            //console.log("alert");
             alert("Invalid Recipe ID "); //in real world we navigate/reroute to an error page and notify the user about the error
             this.router.navigate(['']);
             return false;

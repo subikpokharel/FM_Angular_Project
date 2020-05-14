@@ -42,14 +42,21 @@ export class RecipeDetailComponent implements OnInit {
 
     const dialogRef = this.dialog.open(MyDialogComponent, {
       data: {
-        dialogMessage: "Would you like to save?"
+        dialogTitle: "Delete Recipe",
+        dialogMessage: "Would you like to delete this recipe?",
+        buttonCancel: "NO",
+        buttonSave: "Yes"
       }
     });
 
     dialogRef.afterClosed().subscribe(
         data => {
-          console.log('The Dialog was closed');
-          console.log( data);
+          if(data === "Save clicked"){
+            this.recipeService.deleteRecipe(this.id);
+            this.router.navigate(['../'], {relativeTo: this.route});
+          }else{
+            console.log("Dont");
+          }
         });
     
   }

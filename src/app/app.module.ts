@@ -18,6 +18,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { MatDialogModule } from '@angular/material/dialog';
 import { MyDialogComponent } from './shared/my-dialog/my-dialog.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RecipeService } from './recipes/recipe.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule
   ],
   entryComponents:[MyDialogComponent],
-  providers: [ShoppingListService],
+  providers: [RecipeService,ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

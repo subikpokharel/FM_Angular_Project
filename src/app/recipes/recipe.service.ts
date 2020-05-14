@@ -7,6 +7,7 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class RecipeService{
 
+    recipeChanged = new Subject<Recipe[]>();
     //public recipeSelected = new Subject<Recipe>();
     private recipes: Recipe[] = [
         new Recipe('Chicken Schnitzel', 'A super tasty schnitzel - just yummy!!',
@@ -21,6 +22,22 @@ export class RecipeService{
             new Ingredient('Buns', 2),
             new Ingredient('Meat patty', 1),
             new Ingredient('Salad', 1)
+        ]),
+        new Recipe('Chowmein', 'Nepali noodle dish.',
+        'https://www.alicaspepperpot.com/wp-content/uploads/2018/03/DSC_0039-2-1024x709.jpg',
+        [
+            new Ingredient('Spaghetti', 2),
+            new Ingredient('Meat', 1),
+            new Ingredient('Bell Pepper', 1),
+            new Ingredient('Cabbage', 1)
+        ]),
+        new Recipe('Momos', 'An authentic nepalese street food!!',
+        'https://i.ytimg.com/vi/7tdUCk9pLPw/maxresdefault.jpg',
+        [
+            new Ingredient('Flour', 2),
+            new Ingredient('Meat minced', 1),
+            new Ingredient('Tomatoes', 5),
+            new Ingredient('Veggies', 3)
         ])
     ];
 
@@ -36,6 +53,21 @@ export class RecipeService{
 
     getRecipeById(index: number){
         return this.recipes.slice()[index];
+    }
+
+    addRecipe(recipe: Recipe){
+        this.recipes.push(recipe);
+        this.recipeChanged.next(this.recipes.slice());
+    }
+
+    updateRecipe(index:number, newRecipe: Recipe){
+        this.recipes[index] = newRecipe;
+        this.recipeChanged.next(this.recipes.slice());
+    }
+
+    deleteRecipe(index: number){
+        this.recipes.splice(index, 1);
+        this.recipeChanged.next(this.recipes.slice());
     }
 
 }

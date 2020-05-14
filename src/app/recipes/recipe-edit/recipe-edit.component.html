@@ -13,17 +13,17 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label for="imagePath">Image URL</label>
-                        <input type="text" id="imagePath" class="form-control" [formControlName]="'imagePath'">
+                        <input type="text" id="imagePath" class="form-control" [formControlName]="'imagePath'" #imagePath>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <img src="" class="image-responsive">
+                    <img [src]="imagePath.value" class="image-responsive" height="200px;">
                 </div>
             </div>
-
+            <br>
             <div class="row">
                 <div class="col-12">
                     <div class="form-group">
@@ -61,19 +61,24 @@
                             <input type="number" class="form-control" formControlName="amount">
                         </div>
                         <div class="col-2">
-                            <button class="btn btn-danger">X</button>
+                            <button class="btn btn-danger" type="button" (click)="onDeleteIngredient(i)" >X</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-12">
+                    <button class="btn btn-secondary" type="button" (click)="onAddIngredient()">Add Ingredient</button>
+                </div>
+            </div>
+            <hr>
             <div class="row">
                 <div class="col-1">
-                    <button class="btn btn-success" type="submit"> Save </button>
+                    <button class="btn btn-success" type="submit" [disabled]="!recipeForm.valid"> Save </button>
                 </div>
                 <div class="col-1"></div>
                 <div class="col-1">
-                    <button class="btn btn-danger" type="button"> Cancel </button>
+                    <button class="btn btn-danger" type="button" (click)="onCancel()" > Cancel </button>
                 </div>
             </div>
         </form>
