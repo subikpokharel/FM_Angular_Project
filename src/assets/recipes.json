@@ -1,0 +1,60 @@
+[{
+    "name": "Chicken Schnitzel",
+    "description": "A super tasty schnitzel - just yummy!!",
+    "imagePath": "https://img3.stockfresh.com/files/p/peteer/m/39/7817296_stock-photo-wiener-schnitzel-with-potatoes.jpg",
+    "ingredients": [{
+        "name": "Meat",
+        "amount": 1
+    },{
+        "name": "French Fries",
+        "amount": 20
+    }]
+},{
+    "name": "Big Fat Burger",
+    "description": "No words really!!",
+    "imagePath": "https://pbs.twimg.com/media/Dd0OaDXUwAAxKeY.jpg",
+    "ingredients": [{
+        "name": "Buns",
+        "amount": 2
+    },{
+        "name": "Meat patty",
+        "amount": 1
+    },{
+        "name": "Salad",
+        "amount": 2
+    }]
+},{
+    "name": "Chowmein",
+    "description": "Nepali noodle dish.",
+    "imagePath": "https://www.alicaspepperpot.com/wp-content/uploads/2018/03/DSC_0039-2-1024x709.jpg",
+    "ingredients": [{
+        "name": "Spaghetti",
+        "amount": 2
+    },{
+        "name": "Meat",
+        "amount": 1
+    },{
+        "name": "Bell Pepper",
+        "amount": 2
+    },{
+        "name": "Cabbage",
+        "amount": 1
+    }]
+},{
+    "name": "Momos",
+    "description": "An authentic nepalese street food!",
+    "imagePath": "https://pbs.twimg.com/media/Dd0OaDXUwAAxKeY.jpg",
+    "ingredients": [{
+        "name": "Flour",
+        "amount": 2
+    },{
+        "name": "Meat minced",
+        "amount": 1
+    },{
+        "name": "Tomatoes",
+        "amount": 5
+    },{
+        "name": "Veggies",
+        "amount": 3
+    }]
+}]

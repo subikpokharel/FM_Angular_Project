@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MyDialogComponent } from './shared/my-dialog/my-dialog.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RecipeService } from './recipes/recipe.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { RecipeService } from './recipes/recipe.service';
     ReactiveFormsModule,
     AppRoutingModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   entryComponents:[MyDialogComponent],
   providers: [RecipeService,ShoppingListService],
